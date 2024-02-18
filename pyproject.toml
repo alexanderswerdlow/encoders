@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "encoders"
+version = "0.0.1"
+authors = [{ name="Alexander Swerdlow", email="aswerdlow1@gmail.com" }]
+description = "A utility library for encoders."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "torch",
+    "torchvision",
+    "numpy>=1.22",
+    "pillow>=9.0.0",
+    "einops>=0.6.0",
+    "jaxtyping>=0.2.25",
+    "timm",
+    "beartype"
+]
+
+[project.optional-dependencies]
+DEV = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/alexanderswerdlow/encoders"
+
+[tool.black]
+line-length = 150
+target-version = ['py310']
